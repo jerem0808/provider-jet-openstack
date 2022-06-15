@@ -36,12 +36,12 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/juliosueiras/provider-jet-openstack/apis"
-	"github.com/juliosueiras/provider-jet-openstack/apis/v1alpha1"
-	"github.com/juliosueiras/provider-jet-openstack/config"
-	"github.com/juliosueiras/provider-jet-openstack/internal/clients"
-	"github.com/juliosueiras/provider-jet-openstack/internal/controller"
-	"github.com/juliosueiras/provider-jet-openstack/internal/features"
+	"github.com/jerem0808/provider-jet-openstack/apis"
+	"github.com/jerem0808/provider-jet-openstack/apis/v1alpha1"
+	"github.com/jerem0808/provider-jet-openstack/config"
+	"github.com/jerem0808/provider-jet-openstack/internal/clients"
+	"github.com/jerem0808/provider-jet-openstack/internal/controller"
+	"github.com/jerem0808/provider-jet-openstack/internal/features"
 )
 
 func main() {

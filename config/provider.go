@@ -26,7 +26,7 @@ import (
 
 const (
 	resourcePrefix = "openstack"
-	modulePath     = "github.com/juliosueiras/provider-jet-openstack"
+	modulePath     = "github.com/jerem0808/provider-jet-openstack"
 )
 
 //go:embed schema.json

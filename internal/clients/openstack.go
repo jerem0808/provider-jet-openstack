@@ -28,7 +28,7 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/terraform"
 
-	"github.com/juliosueiras/provider-jet-openstack/apis/v1alpha1"
+	"github.com/jerem0808/provider-jet-openstack/apis/v1alpha1"
 )
 
 const (

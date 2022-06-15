@@ -25,7 +25,7 @@ import (
 
 	"github.com/crossplane/terrajet/pkg/pipeline"
 
-	"github.com/juliosueiras/provider-jet-openstack/config"
+	"github.com/jerem0808/provider-jet-openstack/config"
 )
 
 func main() {

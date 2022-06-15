@@ -2,7 +2,7 @@
 # Setup Project
 
 PROJECT_NAME := provider-jet-openstack
-PROJECT_REPO := github.com/juliosueiras/$(PROJECT_NAME)
+PROJECT_REPO := github.com/jerem0808/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION := 1.1.6
 

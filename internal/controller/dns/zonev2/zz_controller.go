@@ -30,7 +30,7 @@ import (
 	"github.com/crossplane/terrajet/pkg/terraform"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/juliosueiras/provider-jet-openstack/apis/dns/v1alpha1"
+	v1alpha1 "github.com/jerem0808/provider-jet-openstack/apis/dns/v1alpha1"
 )
 
 // Setup adds a controller that reconciles ZoneV2 managed resources.

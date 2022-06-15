@@ -1,4 +1,4 @@
-module github.com/juliosueiras/provider-jet-openstack
+module github.com/jerem0808/provider-jet-openstack
 
 go 1.17
 
