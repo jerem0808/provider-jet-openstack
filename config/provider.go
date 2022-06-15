@@ -44,8 +44,7 @@ func GetProvider() *tjconfig.Provider {
 	pc := tjconfig.NewProviderWithSchema([]byte(providerSchema), resourcePrefix, modulePath,
 		tjconfig.WithDefaultResourceFn(defaultResourceFn))
 
-	for _, configure := range []func(provider *tjconfig.Provider){
-	} {
+	for _, configure := range []func(provider *tjconfig.Provider){} {
 		configure(pc)
 	}
 

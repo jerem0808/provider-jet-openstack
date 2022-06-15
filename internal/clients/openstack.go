@@ -20,11 +20,12 @@ import (
 	"context"
 	"encoding/json"
 
+	"fmt"
+
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 	"github.com/pkg/errors"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
-	"fmt"
 
 	"github.com/crossplane/terrajet/pkg/terraform"
 
@@ -86,15 +87,19 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			fmt.Sprintf("%s=%s", "OPENSTACK_AUTH_URL", openstackCreds["auth_url"]),
 			fmt.Sprintf("%s=%s", "OPENSTACK_REGION", openstackCreds["region"]),
 			fmt.Sprintf("%s=%s", "OPENSTACK_INSECURE", openstackCreds["insecure"]),
+			fmt.Sprintf("%s=%s", "OPENSTACK_USER_DOMAIN_NAME", openstackCreds["user_domain_name"]),
+			fmt.Sprintf("%s=%s", "OPENSTACK_CACERT", openstackCreds["cacert_file"]),
 		}
 		// set credentials in Terraform provider configuration
 		ps.Configuration = map[string]interface{}{
-			"user_name": openstackCreds["user_name"],
-			"password": openstackCreds["password"],
-			"tenant_name": openstackCreds["tenant_name"],
-			"auth_url": openstackCreds["auth_url"],
-			"region": openstackCreds["region"],
-			"insecure": openstackCreds["insecure"],
+			"user_name":        openstackCreds["user_name"],
+			"password":         openstackCreds["password"],
+			"tenant_name":      openstackCreds["tenant_name"],
+			"auth_url":         openstackCreds["auth_url"],
+			"region":           openstackCreds["region"],
+			"insecure":         openstackCreds["insecure"],
+			"user_domain_name": openstackCreds["user_domain_name"],
+			"cacert_file":      openstackCreds["cacert_file"],
 		}
 		return ps, nil
 	}
